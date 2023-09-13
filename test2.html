@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Kiểm tra xem trình duyệt có hỗ trợ WebRTC hay không
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  // Mở máy ảnh và microphone
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      // Ở đây, bạn có thể hiển thị stream video trên một thẻ video hoặc làm bất kỳ điều gì bạn muốn.
+      var videoElement = document.createElement("video");
+      document.body.appendChild(videoElement);
+      videoElement.srcObject = stream;
+      videoElement.play();
+    })
+    .catch(function (error) {
+      console.error('Lỗi khi truy cập máy ảnh:', error);
+    });
+} else {
+  console.error('Trình duyệt không hỗ trợ WebRTC');
+}
+
+    </script>
+</body>
+</html>
