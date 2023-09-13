@@ -13,39 +13,41 @@
   <h2>Vocabulary</h2>
   
   <div class="table-responsive">
-    <table class="table table-bordered">
-        Week 1
-      <thead class="table-success">
-        <tr>
-          <th>#</th>
-          <th>Word</th>
-          <th>Type</th>
-          <th>Mean</th>
-          <th>Note</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td class="word">Dog</td>
-          <td>N</td>
-          <td>Con chó</td>
-          <td>Easy</td>
-          <td><button id="read-btn" class="btn btn-primary">Read</button> <button class="btn btn-danger read-btn">Edit</button></td>
-        </tr>
-      </tbody> 
-    </table>
+<div class="row">
+    <div class="col-4">
+        <script id="lbdict_plugin_frame" type="text/javascript">!function(){var h={s:"https://dict.laban.vn",w:260,h:500,hl:2,th:3};function loadScript(t,e){var n=document.createElement("script");n.type="text/javascript",n.readyState?n.onreadystatechange=function(){("loaded"===n.readyState||"complete"===n.readyState)&&(n.onreadystatechange=null,e())}:n.onload=function(){e()},n.src=t,q=document.getElementById("lbdict_plugin_frame"),q.parentNode.insertBefore(n,q)}setTimeout(function(){loadScript("https://stc-laban.zdn.vn/dictionary/js/plugin/lbdictplugin.frame.min.js",function(){lbDictPluginFrame.init(h)})},1e3); }();</script>
+    </div>
+    <div class="col-8">
+        <table class="table table-bordered">
+            Week 1
+        <thead class="table-success">
+            <tr>
+            <th class="col-1">#</th>
+            <th class="col-2">Word</th>
+            <th class="col-1">Type</th>
+            <th class="col-3">Mean</th>
+            <th class="col-3">Note</th>
+            <th class="col-2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>1</td>
+            <td class="word">Dog</td>
+            <td>N</td>
+            <td>Con chó</td>
+            <td>Easy</td>
+            <td><button id="read-btn" class="btn btn-primary">Read</button> <button class="btn btn-danger read-btn">Edit</button></td>
+            </tr>
+        </tbody> 
+        </table>
+    </div>
+</div>
   </div>
 </div>
 
 <!-- Read word -->
-<button id="readButton">Đọc từ</button>
-<table>
-    <tr>
-        <th class="word">Hello</th>
-    </tr>
-</table>
+
 <script>
     const readButton = document.getElementById('read-btn');
     const wordElement = document.querySelector('.word');
@@ -80,6 +82,7 @@
             }
         });
     </script> -->
-    <script id="lbdict_plugin_frame" type="text/javascript">!function(){var h={s:"https://dict.laban.vn",w:260,h:260,hl:2,th:3};function loadScript(t,e){var n=document.createElement("script");n.type="text/javascript",n.readyState?n.onreadystatechange=function(){("loaded"===n.readyState||"complete"===n.readyState)&&(n.onreadystatechange=null,e())}:n.onload=function(){e()},n.src=t,q=document.getElementById("lbdict_plugin_frame"),q.parentNode.insertBefore(n,q)}setTimeout(function(){loadScript("https://stc-laban.zdn.vn/dictionary/js/plugin/lbdictplugin.frame.min.js",function(){lbDictPluginFrame.init(h)})},1e3); }();</script>
+    
+    <script type="text/javascript">var lbplugin_event_opt={"extension_enable":true,"dict_type":1,"dbclk_event":{"trigger":"none","enable":true,"display":1},"select_event":{"trigger":"none","enable":true,"display":1}};function loadScript(t,e){var n=document.createElement("script");n.type="text/javascript",n.readyState?n.onreadystatechange=function(){("loaded"===n.readyState||"complete"===n.readyState)&&(n.onreadystatechange=null,e())}:n.onload=function(){e()},n.src=t,document.getElementsByTagName("head")[0].appendChild(n)}setTimeout(function(){null==document.getElementById("lbdictex_find_popup")&&loadScript("https://stc-laban.zdn.vn/dictionary/js/plugin/lbdictplugin.min.js?"+Date.now()%1e4,function(){lbDictPlugin.init(lbplugin_event_opt)})},1e3);</script>
 </body>
 </html>
